@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+}
+
+/* Terminal Interface Styles */
+#terminal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 400px;
+    height: 300px;
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 14px;
+    border-radius: 6px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 1000;
+    border: 1px solid #333;
+}
+
+#terminal-header {
+    background-color: #333;
+    color: #ccc;
+    padding: 5px 10px;
+    font-size: 12px;
+    user-select: none;
+}
+
+#terminal-output {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.message {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.system-message {
+    color: #6a9955;
+}
+
+.user-query {
+    color: #d4d4d4;
+    font-weight: bold;
+}
+
+.prolog-result {
+    color: #ce9178;
+    /* Binding color */
+}
+
+.prolog-true {
+    color: #b5cea8;
+    font-weight: bold;
+}
+
+.prolog-false {
+    color: #f48771;
+    font-weight: bold;
+}
+
+.prolog-error {
+    color: #f44747;
+}
+
+#terminal-input-line {
+    display: flex;
+    padding: 10px;
+    background-color: #1e1e1e;
+}
+
+#prompt {
+    color: #569cd6;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#term-input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: #d4d4d4;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 14px;
+    outline: none;
+}
+
+#chart {
+    width: 100%;
+    height: 800px;
+    border: 1px solid #ddd;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.node circle {
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.node text {
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.link {
+    stroke: #999;
+    stroke-opacity: 0.6;
+}
+
+.marriage-link {
+    stroke-opacity: 0.8;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Family Tree</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Nurislam's Family Tree</h1>
+        <div id="terminal">
+            <div id="terminal-header">SWI-Prolog (Web)</div>
+            <div id="terminal-output">
+                <div class="message system-message">Welcome to SWI-Prolog (Web Version)</div>
+                <div class="message system-message">For help, use ?- help(Topic). or ?- apropos(Word).</div>
+                <div class="message system-message">Example queries:</div>
+                <div class="message system-message">person_info(person) -shows info about that person </div>
+                <div class="message system-message">sibling_count(person, Count) -shows the number of siblings.</div>
+                <div class="message system-message">lineage(person, L) -shows the lineage of that person</div>
+            </div>
+            <div id="terminal-input-line">
+                <span id="prompt">?- </span>
+                <input type="text" id="term-input" autocomplete="off" autofocus>
+            </div>
+        </div>
+        <div id="chart"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
